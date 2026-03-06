@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Private Access</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+margin-top:120px;
+}
+
+button{
+padding:15px 40px;
+font-size:20px;
+background:#ff3333;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin:10px;
+}
+
+#main{
+display:none;
+}
+
+#content{
+display:none;
+}
+
+img{
+width:260px;
+border-radius:12px;
+margin-top:20px;
+}
+
+.message{
+font-family:"Comic Sans MS", cursive;
+font-size:28px;
+margin-top:20px;
+color:#ff4d4d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="agecheck">
+
+<h1>Age Verification</h1>
+
+<p>You must confirm you are 18 or older to view this content.</p>
+
+<button onclick="enterSite()">I am 18+</button>
+<button onclick="alert('Access denied')">Exit</button>
+
+</div>
+
+<div id="main">
+
+<h1>I finally took a picture</h1>
+
+<p>
+but I'm not posting it publicly<br>
+so this is for you
+</p>
+
+<button onclick="reveal()">Reveal</button>
+
+</div>
+
+<div id="content">
+
+<img src="me.jpg">
+
+<div class="message">
+You've unlocked Baxi Premium
+</div>
+
+</div>
+
+<script>
+
+function enterSite(){
+document.getElementById("agecheck").style.display="none";
+document.getElementById("main").style.display="block";
+}
+
+function reveal(){
+document.getElementById("content").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
